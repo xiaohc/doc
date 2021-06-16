@@ -1,0 +1,57 @@
+
+#! git ====================
+
+	>> windows 设置提交
+	git config --global core.autocrlf false
+	git config --global core.safecrlf true
+	
+	>> 下载代码
+	git clone ...
+	git clone http://ip/url
+	
+	>> 切换分支
+	git branch -a
+	git checkout -b v1.0.0 origin/v1.0.0
+	
+	>> 更新最新代码
+	git pull
+	
+	>> 提交代码
+	git add .
+	git status
+	git commit -m "修改说明"
+	git push
+	
+	>> 恢复文件的修改内容
+	git checkout -- filepath/filename
+	
+	
+#! linux command ==================== 	
+
+	>> 日期转秒
+	date -d "2021-05-12 17:02:12" +%s
+	
+	>> 日期转天
+	date -d "2021-05-12 17:02:12" +%j
+	
+
+#! windows command ==================== 	
+
+	>> 截图工具
+	snippingtool
+	
+	>> 计算器
+	calc
+	
+#! java lib ==================== 		
+
+	>> 集合判断
+	CollectionUtils.isEmpty(collection);
+	
+	>> 切面测试工具类
+	Object o = AopTestUtils.getTargetObject(aopObject);
+	ReflectionTestUtils.setField(object, "fieldName", fieldObject);
+
+	>> 复制对象属性
+	BeanUtils.copyProperties();
+	
