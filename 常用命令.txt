@@ -24,24 +24,7 @@
 	
 	>> 恢复文件的修改内容
 	git checkout -- filepath/filename
-	
-	
-#! linux command ==================== 	
 
-	>> 日期转秒
-	date -d "2021-05-12 17:02:12" +%s
-	
-	>> 日期转天
-	date -d "2021-05-12 17:02:12" +%j
-	
-
-#! windows command ==================== 	
-
-	>> 截图工具
-	snippingtool
-	
-	>> 计算器
-	calc
 	
 #! java lib ==================== 		
 
@@ -54,4 +37,56 @@
 
 	>> 复制对象属性
 	BeanUtils.copyProperties();
+	
+	>> 常用类
+	org.springframework.util
+	
+	>> 常用名词
+	invoke 激发（某种行动）
+	interval 间隔
+	
+	
+#! windows command ==================== 	
+
+	>> 截图工具
+	snippingtool
+	
+	>> 计算器
+	calc
+	
+
+#! linux command ==================== 	
+
+	>> 日期转秒
+	date -d "2021-05-12 17:02:12" +%s
+	
+	>> 日期转天
+	date -d "2021-05-12 17:02:12" +%j
+	
+	>> 秒转为日期
+	date -d@1606665600 +"%Y-%m-%d %H:%M:%S"
+
+	>> 查询进程使用的文件
+	lsof -p ${proc_id}
+	
+	>> tcpdump网络抓包
+	tcpdump -n -i eth2 host 192.168.0.1 and 192.168.0.57 and udp port 7080
+	tcpdump -A -nn tcp port 8000
+	
+	
+#! shell demo ==================== 	
+	
+	>> 模拟终端输入方式1
+	echo "yes" | proc1
+	
+	>> 模拟终端输入方式2
+	ssh root@ip_address - tt <<EOF
+		ls
+		echo "hello world"
+	EOF
+	
+	>> 比较文件并获取差异内容
+	sort ${first_file} ${second_file} | uniq -u > ${compare_result_file}
+	
+	>> 获取文本中的时间
 	
