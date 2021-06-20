@@ -88,5 +88,6 @@
 	>> 比较文件并获取差异内容
 	sort ${first_file} ${second_file} | uniq -u > ${compare_result_file}
 	
-	>> 获取文本中的时间
-	
+	>> 替换文本中的时间内容（正则表达式替换）
+	echo ',"time":"2020-02-23_19:33:12",' | sed 's/2020-02-23_19:\([0-9]*:[0-9]*\)/a/g'
+	sed -i 's/2020-02-23_\([0-9]*:[0-9]*:[0-9]*\)/yyyy-mm-dd_hh:mi:ss/g' temp.dat
