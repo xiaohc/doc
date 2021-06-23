@@ -44,6 +44,21 @@
 	>> 常用名词
 	invoke 激发（某种行动）
 	interval 间隔
+
+
+#! arthas command ==================== 	
+
+	>> debug时，查询类变量当时的取值
+	watch com.xxx.biz.impl.Cache getCache '{target, target.CacheManager}' -x 2
+	
+	>> debug时，条件变量为：类函数调用/变量的特定值
+	watch com.xxx.biz.impl.Cache getCache '{target, target.CacheManager}' -x 2 'target.getCacheName()="tmpCache"'
+	
+	>> debug时，条件变量为：类的特定子类
+	watch com.xxx.biz.impl.Cache getCache '{target, target.CacheManager}' -x 2 'target.getClass().name="com.xxx.biz.impl.TmpCache"'
+
+	>> debug时，条件变量的 and 链接
+	watch com.xxx.biz.impl.Cache getCache '{target, target.CacheManager}' -x 2 'target.getClass().name="com.xxx.biz.impl.TmpCache" and #cost>2'
 	
 	
 #! windows command ==================== 	
