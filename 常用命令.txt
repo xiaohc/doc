@@ -7,7 +7,9 @@
 	
 	>> 下载代码
 	git clone ...
-	git clone http://ip/url
+	git clone https://github.com/xiaohc/CoachStationSystem
+	git clone git@github.com:xiaohc/CoachStationSystem.git
+	
 	
 	>> 切换分支
 	git branch -a
@@ -24,6 +26,19 @@
 	
 	>> 恢复文件的修改内容
 	git checkout -- filepath/filename
+
+	>> 设置用户信息
+	git config --global user.name "xxx"
+	git config --global user.email "xxx@github.com"
+	git config --global user.password "yyyy"
+	
+	>> ssh登录
+	ssh-keygen -t rsa -C "xxx@github.com"
+	clip < ~/.ssh/id_rsa.pub
+		
+	>> http访问免密码
+	cat ~/.gitconfig
+	git config --global credential.helper store
 
 	
 #! java lib ==================== 		
